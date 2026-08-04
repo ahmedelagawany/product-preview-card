@@ -1,74 +1,100 @@
-mar body {
-  font-family: sans-serif;
-  min-height: 100vh;
-  background-color: hsl(0, 0%, 95%);
-}
-.container {
+.card-container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 900px;
-  border-radius: 8px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  max-width: 100%;
+  margin: 100px auto;
+  border-radius: 12px;
+  width: 600px;
   overflow: hidden;
-  padding: 8px;
-  margin: 0 auto;
-  border-radius: 20px;
-  font-size: 15px;
 }
-@media (max-width: 768px) {
-  .container {
-    width: auto;
+@media (max-width: 600px) {
+  body {
+    background-color: hsl(30, 38%, 92%);
+    padding: 16px;
+  }
+  .card-container {
+    display: grid;
     grid-template-columns: 1fr;
-    .Sedans {
-      border-radius: 20px 20px 0 0;
-    }
-    .Luxury {
-      border-radius: 0 0 20px 20px;
-    }
+    width: 100%;
+    max-width: 375px;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .card-container .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .card-container .content {
+    padding: 24px;
   }
 }
-.Sedans,
-.SUVs,
-.Luxury {
-  padding: 48px;
+.card-container .img,
+.card-container .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-container .content {
+  padding: 32px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 35px;
+  justify-content: space-between;
 }
-.Sedans {
-  background-color: hsl(31, 77%, 52%);
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  background-color: hsl(30, 38%, 92%);
 }
-.SUVs {
-  background-color: hsl(184, 100%, 22%);
+h1 {
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
 }
-.Luxury {
-  background-color: hsl(179, 100%, 13%);
+.category {
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 5px;
 }
-h2 {
-  color: hsl(0, 0%, 95%);
-  font-size: 2.5rem;
-  text-transform: uppercase;
+.card-container .price-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
 }
-p {
-  color: hsla(0, 0%, 100%, 0.75);
-  line-height: 1.6;
-}
-a.btn {
-  text-decoration: none;
-  background-color: hsl(0, 0%, 95%);
-  padding: 12px 30px;
-  border-radius: 25px;
+.card-container .current-price {
+  font-size: 36px;
   font-weight: bold;
-  font-size: 15px;
-  margin-top: auto;
-  transition: 0.3s;
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", sans-serif;
 }
-.Sedans a.btn {
-  color: hsl(31, 77%, 52%);
+.card-container .old-price {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
 }
-.SUVs a.btn {
-  color: hsl(184, 100%, 22%);
+
+.description {
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
 }
-.Luxury a.btn {
-  color: hsl(179, 100%, 13%);
+.add-cart {
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(30, 38%, 92%);
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.add-cart:hover {
+  background-color: hsl(158, 42%, 18%);
 }
