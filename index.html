@@ -39,36 +39,45 @@
     </style>
   </head>
   <body>
-    <div class="card-container">
-      <div class="img">
-        <picture>
-          <source
-            media="(min-width: 600px)"
-            srcset="images/image-product-mobile.jpg"
-          />
-          <img src="images/image-product-desktop.jpg" alt="" />
-        </picture>
-      </div>
+    <main>
+      <article class="product-card">
+        <div class="card-container">
+          <div class="img">
+            <picture>
+              <source
+                media="(min-width: 600px)"
+                srcset="image-product-mobile.jpg"
+              />
+              <img
+                src="image-product-desktop.jpg"
+                alt="product preview card image"
+              />
+            </picture>
+          </div>
 
-      <div class="content">
-        <p class="category">Perfume</p>
+          <div class="content">
+            <p class="category">Perfume</p>
 
-        <h1>Gabrielle Essence Eau De Parfum</h1>
+            <h1>Gabrielle Essence Eau De Parfum</h1>
 
-        <p class="description">
-          A floral, solar and voluptuous interpretation composed by Olivier
-          Polge, Perfumer-Creator for the House of CHANEL.
-        </p>
-        <div class="price-container">
-          <span class="current-price">$149.99</span>
-          <span class="old-price">$169.99</span>
+            <p class="description">
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+
+            <div class="price-container">
+              <span class="current-price">$149.99</span>
+              <span class="old-price">$169.99</span>
+            </div>
+
+            <button type="button" class="add-cart">
+              <img src="icon-cart.svg" alt="cart icon" />
+              Add to Cart
+            </button>
+          </div>
         </div>
-        <button class="add-cart">
-          <img src="images/icon-cart.svg" alt="cart icon" />Add to Cart
-        </button>
-      </div>
-    </div>
-
+      </article>
+    </main>
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
