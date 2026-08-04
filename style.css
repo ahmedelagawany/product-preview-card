@@ -1,0 +1,74 @@
+mar body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 95%);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 900px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 8px;
+  margin: 0 auto;
+  border-radius: 20px;
+  font-size: 15px;
+}
+@media (max-width: 768px) {
+  .container {
+    width: auto;
+    grid-template-columns: 1fr;
+    .Sedans {
+      border-radius: 20px 20px 0 0;
+    }
+    .Luxury {
+      border-radius: 0 0 20px 20px;
+    }
+  }
+}
+.Sedans,
+.SUVs,
+.Luxury {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+}
+.Sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+.SUVs {
+  background-color: hsl(184, 100%, 22%);
+}
+.Luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+h2 {
+  color: hsl(0, 0%, 95%);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.6;
+}
+a.btn {
+  text-decoration: none;
+  background-color: hsl(0, 0%, 95%);
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: auto;
+  transition: 0.3s;
+}
+.Sedans a.btn {
+  color: hsl(31, 77%, 52%);
+}
+.SUVs a.btn {
+  color: hsl(184, 100%, 22%);
+}
+.Luxury a.btn {
+  color: hsl(179, 100%, 13%);
+}
